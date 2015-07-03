@@ -249,9 +249,18 @@ def average(number_list):
 
 
 def advanced_join_strings(list_of_words):
-    """
-    :param list_of_words: a list of individual words
-    :return: a string of words separated by comma
+    """Return a single string with each word from the input list
+    separated by a comma.
+
+        >>> advanced_join_strings(["Labrador", "Poodle", "French Bulldog"])
+        'Labrador, Poodle, French Bulldog'
+
+    If there's only one thing in the list, it should return just that
+    thing, of course:
+
+        >>> advanced_join_strings(["Pretzel"])
+        'Pretzel'
+
     """
     result = ""
     if len(list_of_words) == 1:
@@ -261,8 +270,9 @@ def advanced_join_strings(list_of_words):
             result += word + ", "
     return result + list_of_words[-1]
 
+
 ##############################################################################
-# You can ignore everything after here
+
 
 if __name__ == "__main__":
     import doctest
